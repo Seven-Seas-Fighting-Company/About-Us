@@ -1,20 +1,32 @@
+@font-face {
+    font-family: "CARGO CRATE";
+    src: url(assets/CARGC___.TTF);
+}
+
 body {
     
+    font-family: "CARGO CRATE";
+    margin: 0px;
+    padding: 0px;
+    margin-top: -60px;
 }
 h1 {
-    font-size: 140px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 90px;
+    font-family: "CARGO CRATE";
     color: black;
-    /* text-shadow: 3px 3px 0 #000,
-    3px -3px 0 #000,
-    -3px 3px 0 #000,
-    -3px -3px 0 #000; */
+    text-align: center;
 }
 h2 {
-    font-size: 60px;
+    font-size: 52px;
     text-align: center;
 }
 div {
     display: flexbox;
     align-items: center;
+    text-align: center;
+}
+
+#header-main {
+    background-image: url(assets/tessallate.png);
+    padding: 2%;
 }
