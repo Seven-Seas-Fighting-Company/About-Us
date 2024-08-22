@@ -14,10 +14,12 @@ h1 {
     font-family: "CARGO CRATE";
     color: black;
     text-align: center;
+    font-weight: normal;
 }
 h2 {
     font-size: 42px;
     text-align: center;
+    font-weight: normal;
 }
 div {
     display: flexbox;
@@ -78,8 +80,16 @@ div {
 #our-story-container {
     margin-left: 400px;
     margin-right: 400px;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 400ms ease-in-out;
     opacity: 1;
+}
+
+#products-container {
+    opacity: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 400ms ease-in-out;
 }
 
 .fade-out {
@@ -100,7 +110,7 @@ div {
     margin-top: 20px;
     margin-bottom: 30px;
     font-size: 22px;
-    line-height: 28px;
+    line-height: 30px;
 }
 
 #founders-images-container {
@@ -124,10 +134,11 @@ div {
 
 #our-story-founders-title {
     text-align: center;
+    color: rgb(119, 8, 8);
 }
 
 .founder-img {
-    border: 12px solid rgb(13, 60, 68);
+    border: 12px solid rgb(5, 72, 138);
 }
 
 .center {
@@ -136,12 +147,12 @@ div {
 
 .founder-name {
     font-size: 24px;
-    color: rgb(13, 60, 68);
+    color: rgb(119, 8, 8);
 }
 
 .founder-title {
     font-size: 20px;
-    color: rgb(13, 60, 68);
+    color: rgb(119, 8, 8);
     margin-top: 10px;
 }
 
