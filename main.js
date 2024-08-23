@@ -7,6 +7,9 @@ let ourStoryPage;
 let contactUsPage;
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    //add buy now button below products, include free shipping for sf and san luis obispo
+
     console.log(visualViewport.width);
     docWidth = document.createElement("div");
     testDiv = document.getElementById("test");
@@ -28,33 +31,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ourStoryNav.style.color = "#429DAD";
 
-    async function swapPage(fromPage, toPage, fromNav, toNav, pageName) {
+    function swapPage(fromPage, toPage, fromNav, toNav, pageName) {
         fromPage.style.opacity = 0;
         console.log(fromNav, 'im from nav');
         fromNav.style.color = "#FFFFFF";
         toNav.style.color = "#429DAD";
         console.log(toNav);
-        setTimeout(() => {
-            fromPage.style.display = 'none';
-            toPage.style.display = 'block';
-            toPage.style.opacity = 1;
-            currentPage = pageName;
-        }, 400);
-        // let counter = 0;
+        let counter = 0;
+        let interval = setInterval(() => {
+            if (counter === 0) {
+                fromPage.style.display = 'none';
+                toPage.style.display = 'block';
+                currentPage = pageName;
+                counter += 1;
+            } else if (counter === 1) {
+                toPage.style.opacity = 1;
+                counter += 1;
+            } else {
+                counter = 0;
+                clearInterval(interval);
+            }
+        }, 200)
     }
 
     productsNav.addEventListener("click", () => {
-        // console.log(currentPage);
-        // ourStoryNav.style.color = "#FFFFFF";
-        // contactUsNav.style.color = "#FFFFFF";
-        // productsNav.style.color = "#429DAD";
-        // document.getElementById(`${currentPage}-container`).style.opacity = 0;
-        // setTimeout(() => {
-        //     document.getElementById(`${currentPage}-container`).style.display = 'none';
-        //     productsPage.style.opacity = 1;
-        //     productsPage.style.display = 'block';
-        // }, 400);
-        // currentPage = "products";
         let previousPage = document.getElementById(`${currentPage}-container`);
         let previousNav = document.getElementById(`${currentPage}-nav`);
         let nextPage = document.getElementById("products-container");
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (currentPage !== "products") {
             swapPage(previousPage, nextPage, previousNav, nextNav, nextPageName);
-        }
+        };
         
     });
 
@@ -73,25 +73,21 @@ document.addEventListener("DOMContentLoaded", () => {
         let nextPage = document.getElementById("our-story-container");
         let nextNav = document.getElementById("our-story-nav");
         let nextPageName = "our-story";
-        // console.log(currentPage);
-        // contactUsNav.style.color = "#FFFFFF";
-        // productsNav.style.color = "#FFFFFF";
-        // ourStoryNav.style.color = "#429DAD";
-        // ourStoryPage.style.display = "block";
-        // ourStoryPage.style.opacity = 1;
-        // currentPage = "our-story";
         if (currentPage !== "our-story") {
             swapPage(previousPage, nextPage, previousNav, nextNav, nextPageName);
-        }
+        };
         
     });
 
     contactUsNav.addEventListener("click", () => {
-        currentPage = "contact-us";
-        console.log(currentPage);
-        ourStoryNav.style.color = "#FFFFFF";
-        productsNav.style.color = "#FFFFFF";
-        contactUsNav.style.color = "#429DAD";
+        let previousPage = document.getElementById(`${currentPage}-container`);
+        let previousNav = document.getElementById(`${currentPage}-nav`);
+        let nextPage = document.getElementById("contact-us-container");
+        let nextNav = document.getElementById("contact-us-nav");
+        let nextPageName = "contact-us";
+        if (currentPage !== "contact-us") {
+            swapPage(previousPage, nextPage, previousNav, nextNav, nextPageName);
+        };
     });
 });
 window.addEventListener("resize", () => {

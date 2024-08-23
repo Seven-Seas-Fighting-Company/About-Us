@@ -77,10 +77,12 @@ div {
     cursor: pointer;
 }
 
+
+
 #our-story-container {
     margin-left: 400px;
     margin-right: 400px;
-    transition: opacity 400ms ease-in-out;
+    transition: opacity 200ms ease-in-out;
     opacity: 1;
 }
 
@@ -89,7 +91,124 @@ div {
     text-align: center;
     justify-content: center;
     align-items: center;
-    transition: opacity 400ms ease-in-out;
+    transition: opacity 200ms ease-in-out;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.products-section-container {
+    margin-top: 90px;
+    margin-bottom : 40px;
+    border-bottom: 2px solid black;
+}
+
+.product-name {
+    font-size: 40px;
+}
+
+.product-sub {
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact-us-container {
+    opacity: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 200ms ease-in-out;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.contact-us-header-container {
+    font-size: 40px;
+    text-align: center;
+}
+
+.contact-us-header {
+    text-align: center;
+}
+
+.contact-us-subtext {
+    text-align: center;
+    line-height: 30px;
+}
+
+.contact-us-section-container {
+    margin-top: 20px;
+    margin-bottom : 40px;
+    text-align: center;
+    /* text-align: center; */
+    /* border-bottom: 2px solid black; */
+}
+
+.contact-us-subtext-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 30px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-us-form {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#contact-us-textarea {
+    border: 6px solid black;
+    min-width: 600px;
+    min-height: 200px;
+    font-size: 22px;
+    font-family: "CARGO CRATE";
+    margin-top: 6px;
+}
+
+.contact-us-textareas-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-info-input {
+    border: 6px solid black;
+    min-width: 600px;
+    height: 30px;
+    font-size: 22px;
+    font-family: "CARGO CRATE";
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#contact-us-form-button {
+    font-family: "CARGO CRATE";
+    border: 6px solid black;
+    margin-top: 10px;
+    font-size: 24px;
+    color: white;
+    background-color: rgb(66, 157, 173);
+    min-height: 46px;
+    min-width: 76px;
+}
+
+#contact-us-form-button:hover {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.product-img {
+    margin-bottom: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+}
+
+.product-description {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    font-size: 22px;
+    line-height: 30px;
 }
 
 .fade-out {
