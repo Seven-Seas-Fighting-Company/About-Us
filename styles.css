@@ -191,6 +191,7 @@ div {
     background-color: rgb(66, 157, 173);
     min-height: 46px;
     min-width: 76px;
+    padding: 10px;
 }
 
 #contact-us-form-button:hover {
