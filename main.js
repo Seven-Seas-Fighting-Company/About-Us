@@ -29,13 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
     productsPage.style.display = 'none';
     contactUsPage.style.display = 'none';
 
-    ourStoryNav.style.color = "#429DAD";
+    // ourStoryNav.style.color = "#429DAD";
+    ourStoryNav.classList.add("selected");
 
     function swapPage(fromPage, toPage, fromNav, toNav, pageName) {
         fromPage.style.opacity = 0;
         console.log(fromNav, 'im from nav');
-        fromNav.style.color = "#FFFFFF";
-        toNav.style.color = "#429DAD";
+        // fromNav.style.color = "#FFFFFF";
+        // toNav.style.color = "#429DAD";
+        fromNav.classList.remove("selected");
+        toNav.classList.add("selected");
         console.log(toNav);
         let counter = 0;
         let interval = setInterval(() => {
