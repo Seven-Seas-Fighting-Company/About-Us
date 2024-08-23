@@ -39,6 +39,8 @@ div {
     top: 3%;
 }
 
+
+
 #navbar {
     height: 60px;
     min-width: 100%;
@@ -76,6 +78,19 @@ div {
     color: rgb(66, 157, 173);
     cursor: pointer;
 }
+
+.mouse-over {
+    color: rgb(66, 157, 173);
+}
+
+.selected {
+    color: rgb(66, 157, 173);
+}
+
+.deselected {
+    color: rgb(255, 255, 255);
+}
+
 
 
 
