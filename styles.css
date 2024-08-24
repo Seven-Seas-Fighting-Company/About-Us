@@ -255,7 +255,7 @@ div {
     align-items: center;
     text-align: center;
     gap: 20%;
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
 .founder-description {
@@ -269,11 +269,11 @@ div {
 
 #our-story-founders-title {
     text-align: center;
-    color: rgb(119, 8, 8);
+    color: rgb(6, 124, 175);
 }
 
 .founder-img {
-    border: 12px solid rgb(5, 72, 138);
+    border: 12px solid rgb(0, 0, 0);
 }
 
 .center {
@@ -282,12 +282,12 @@ div {
 
 .founder-name {
     font-size: 24px;
-    color: rgb(119, 8, 8);
+    color: rgb(6, 124, 175);
 }
 
 .founder-title {
     font-size: 20px;
-    color: rgb(119, 8, 8);
+    color: rgb(6, 124, 175);
     margin-top: 10px;
 }
 
