@@ -5,9 +5,10 @@ let currentPage;
 let productsPage;
 let ourStoryPage;
 let contactUsPage;
+let containers;
 
 document.addEventListener("DOMContentLoaded", () => {
-
+    
     //add buy now button below products, include free shipping for sf and san luis obispo
 
     console.log(visualViewport.width);
@@ -93,8 +94,43 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     });
 });
+/*
 window.addEventListener("resize", () => {
     docWidth.innerHTML = visualViewport.width;
     logo.style.width = (`${Math.max(Math.round(visualViewport.width / 10.9), 120)}px`)
     console.log(logo);
-})
+});
+*/
+
+window.addEventListener("resize", () => {
+    docWidth.innerHTML = visualViewport.width;
+    if (visualViewport.width <= 768) {
+        logo.style.width = '100px';
+    } else {
+        logo.style.width = (`${Math.max(Math.round(visualViewport.width / 10.9), 90)}px`);
+
+    }
+
+    // console.log(containers);
+    // console.log(docWidth)
+
+    if (visualViewport.width > 768) {
+        
+        ourStoryPage.style.marginRight = `${Math.min(400, Math.max(100, 400 - (1920 - visualViewport.width) / 2))}px`;
+        productsPage.style.marginRight = `${Math.min(400, Math.max(100, 400 - (1920 - visualViewport.width) / 2))}px`;
+        contactUsPage.style.marginRight = `${Math.min(400, Math.max(100, 400 - (1920 - visualViewport.width) / 2))}px`;
+        
+        ourStoryPage.style.marginLeft = `${Math.min(400, Math.max(100, 400 - (1920 - visualViewport.width) / 2))}px`;
+        productsPage.style.marginLeft = `${Math.min(400, Math.max(100, 400 - (1920 - visualViewport.width) / 2))}px`;
+        contactUsPage.style.marginLeft = `${Math.min(400, Math.max(100, 400 - (1920 - visualViewport.width) / 2))}px`;
+        
+        document.getElementById("header-main").style.display = "block";
+        document.getElementById("header-bottom-text").style.display = "block";
+    } else {
+        document.getElementById("header-bottom-text").style.display = "none";
+        document.getElementById("header-main").style.display = "none";
+    }
+    
+    // console.log(logo);
+});
+
