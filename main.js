@@ -58,6 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 200)
     }
 
+    if (visualViewport.width <= 768) {
+        document.getElementById("header-bottom-text").style.display = "none";
+        document.getElementById("header-main").style.display = "none";
+    }
+
     productsNav.addEventListener("click", () => {
         let previousPage = document.getElementById(`${currentPage}-container`);
         let previousNav = document.getElementById(`${currentPage}-nav`);
