@@ -291,6 +291,7 @@ div {
     font-size: 34px;
     line-height: 36px;
     font-family: "BEBASKAI";
+    
 }
 
 .fade-out {
@@ -336,11 +337,7 @@ div {
 
 #our-story-founders-title {
     text-align: center;
-<<<<<<< HEAD
-    color: rgb(6, 124, 175);
-=======
     color: rgb(0, 0, 0);
->>>>>>> test-branch
 }
 
 .founder-img {
@@ -353,20 +350,12 @@ div {
 
 .founder-name {
     font-size: 24px;
-<<<<<<< HEAD
-    color: rgb(6, 124, 175);
-=======
     color: rgb(10 101 117);
->>>>>>> test-branch
 }
 
 .founder-title {
     font-size: 20px;
-<<<<<<< HEAD
-    color: rgb(6, 124, 175);
-=======
     color: rgb(10 101 117);
->>>>>>> test-branch
     margin-top: 10px;
 }
 
