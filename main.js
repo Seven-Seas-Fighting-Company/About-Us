@@ -58,12 +58,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 200)
     }
 
-    if (visualViewport.width <= 768) {
+    if (visualViewport.width < 768) {
         document.getElementById("header-bottom-text").style.display = "none";
         document.getElementById("header-main").style.display = "none";
         document.getElementById("contact-us-email-input").style.minWidth = "360px"
         document.getElementById("contact-us-phone-input").style.minWidth = "360px"
         document.getElementById("contact-us-textarea").style.minWidth = "360px"
+        document.getElementById("navbar").style.fontSize = "26px"
     }
 
     productsNav.addEventListener("click", () => {
