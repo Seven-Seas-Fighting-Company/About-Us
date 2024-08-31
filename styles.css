@@ -423,9 +423,9 @@ div {
     }
 
     .nav-element {
-        /* margin-left: 10px; */
-        /* margin-right: 10px; */
-        font-size: 18px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 16px;
         text-align: center;
     }
 
