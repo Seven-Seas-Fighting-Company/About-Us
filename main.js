@@ -61,6 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (visualViewport.width <= 768) {
         document.getElementById("header-bottom-text").style.display = "none";
         document.getElementById("header-main").style.display = "none";
+        document.getElementById("contact-us-email-input").style.minWidth = "360px"
+        document.getElementById("contact-us-phone-input").style.minWidth = "360px"
+        document.getElementById("contact-us-textarea").style.minWidth = "360px"
     }
 
     productsNav.addEventListener("click", () => {
@@ -131,9 +134,15 @@ window.addEventListener("resize", () => {
         
         document.getElementById("header-main").style.display = "block";
         document.getElementById("header-bottom-text").style.display = "block";
+        document.getElementById("contact-us-email-input").style.minWidth = "600"
+        document.getElementById("contact-us-phone-input").style.minWidth = "600"
+        document.getElementById("contact-us-textarea").style.minWidth = "600"
     } else {
         document.getElementById("header-bottom-text").style.display = "none";
         document.getElementById("header-main").style.display = "none";
+        document.getElementById("contact-us-email-input").style.minWidth = "360px"
+        document.getElementById("contact-us-phone-input").style.minWidth = "360px"
+        document.getElementById("contact-us-textarea").style.minWidth = "360px"
     }
     
     // console.log(logo);
