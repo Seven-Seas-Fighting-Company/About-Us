@@ -93,7 +93,48 @@
                                     <li>Circulation enhancing</li>
                                     <li>Moisture wicking</li>
                                 </ul>
-                            </div>
+
+                                <div class="order-now-container">
+
+                                    <button class="order-now-button" 
+                                    id="order-handwraps-button">Order Now!</button>
+                                    <div id="handwraps-order-subtext">(Local Delivery to SF and SLO Only)</div>
+                                    <div class="order-product-menu" 
+                                    id="order-handwraps-menu"
+                                    style="display: none;">
+                                    <form id="order-handwraps-form" action="https://formspree.io/f/xzzpolpg" method="POST">
+                                        <!-- <label>Send Us A Message!</label> -->
+                                        <div class="order-product-form-inputs-container">
+                                            
+                                            <label>Phone Number</label>
+                                            <input
+                                                name="phone-number" 
+                                                id="order-handwraps-phone-input" 
+                                                class="product-phone-input">
+                                            
+                                            </input>
+                                            <label>Pairs</label>
+                                            <select class="product-quantity-input" name="pairs-handwraps-requested">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                            
+                                        </div>
+                                        <button id="contact-us-form-button" type="submit">Send!</button>
+                                        <div id="handwraps-order-subtext">After Sending your order, we'll contact <br> you to arrange a delivery!</div>
+                                    </form>
+                        
+                                    </div>
+                                </div>
+                            </div> 
                         </div>
                         <div class="product-right">
                             <img class="product-img" height="200px" style="border: 6px solid black;" src="assets/picture_of_our_product_in_shipping_box.png">
@@ -202,11 +243,10 @@
                                 <label style="text-align: left;">Your Email:</label>
                                 <input type="email" name="email" id="contact-us-email-input" class="contact-us-info-input"></input>
                                 <label>Your Phone Number: (XXX-XXX-XXXX)</label>
-                                <input type="tel" 
+                                <input
                                     name="phone-number" 
                                     id="contact-us-phone-input" 
-                                    class="contact-us-info-input"
-                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                                    class="contact-us-info-input">
                                     
                                 </input>
                                 <label>Message:</label>

@@ -102,6 +102,15 @@ document.addEventListener("DOMContentLoaded", () => {
             swapPage(previousPage, nextPage, previousNav, nextNav, nextPageName);
         };
     });
+
+    document.getElementById("order-handwraps-button").addEventListener("click", () => {
+        let menu = document.getElementById("order-handwraps-menu");
+        if (menu.style.display == "none") {
+            menu.style.display = "block";
+        } else {
+            menu.style.display = "none";
+        }
+    });
 });
 /*
 window.addEventListener("resize", () => {

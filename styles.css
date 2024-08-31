@@ -5,36 +5,6 @@
 }
 
 @font-face {
-    font-family: "BANK PRINTER";
-    src: url(assets/F25_Bank_Printer.ttf);
-}
-
-@font-face {
-    font-family: "BANK PRINTER BOLD";
-    src: url(assets/F25_Bank_Printer_Bold.ttf);
-}
-
-@font-face {
-    font-family: "HACK REGULAR";
-    src: url(assets/Hack-Regular.ttf);
-}
-
-@font-face {
-    font-family: "HACK BOLD";
-    src: url(assets/Hack-Bold.ttf);
-}
-
-@font-face {
-    font-family: "NK57 NO SB";
-    src: url(assets/NK57\ Monospace\ No\ Sb.otf);
-}
-
-@font-face {
-    font-family: "ATLANTICO";
-    src: url(assets/AtlanticoFont-Demo.otf);
-}
-
-@font-face {
     font-family: "BEBASKAI";
     src: url(assets/BebasKai.ttf);
 }
@@ -357,11 +327,110 @@ div {
     font-size: 20px;
     color: rgb(10 101 117);
     margin-top: 10px;
+
 }
+
+.order-now-button {
+    font-family: "CARGO CRATE";
+    border: 6px solid black;
+    margin-top: 10px;
+    font-size: 24px;
+    color: white;
+    background-color: rgb(66, 157, 173);
+    min-height: 46px;
+    min-width: 76px;
+    padding: 10px;
+    /* margin-left: 10px; */
+    /* margin-bottom: 20px; */
+}
+
+.order-now-button:hover {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.order-now-container {
+    /* min-height: 300px; */
+}
+
+.order-product-menu {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.order-product-form-inputs-container {
+    margin-bottom: 40px;
+}
+
+.product-phone-input {
+    border: 6px solid black;
+    min-width: 200px;
+    min-height: 40px;
+}
+
+.product-quantity-input {
+    font-family: "CARGO CRATE";
+    padding: 10px;
+    border: 6px solid black;
+    font-size: 16px;
+}
+
+#handwraps-order-subtext {
+    margin-top: 20px;
+}
+
+
+
 
 /* Existing styles remain unchanged */
 
 @media (max-width: 768px) {
+
+    .order-now-button {
+        font-family: "CARGO CRATE";
+        border: 6px solid black;
+        margin-top: 10px;
+        font-size: 24px;
+        color: white;
+        background-color: rgb(66, 157, 173);
+        min-height: 46px;
+        min-width: 76px;
+        padding: 10px;
+        /* margin-left: 10px; */
+        /* margin-bottom: 20px; */
+    }
+    
+    .order-now-button:hover {
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+    
+    .order-now-container {
+        /* min-height: 300px; */
+    }
+    
+    .order-product-menu {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 22px;
+    }
+    
+    .product-phone-input {
+        border: 4px solid black;
+        min-width: 100px;
+        min-height: 40px;
+    }
+    
+    .product-quantity-input {
+        font-family: "CARGO CRATE";
+        padding: 10px;
+        border: 4px solid black;
+    }
+
+
+
+
+
     h1 {
         font-size: 48px;
     }
