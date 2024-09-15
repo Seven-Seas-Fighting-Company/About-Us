@@ -148,7 +148,7 @@ div {
 }
 
 .product-sub {
-    display: flex;
+    display: block;
     justify-content: space-between;
 }
 
@@ -380,6 +380,21 @@ div {
     
 }
 
+.product-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.product-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-bottom {
+    display: block;
+}
 
 
 
