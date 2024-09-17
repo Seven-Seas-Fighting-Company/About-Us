@@ -1,0 +1,63 @@
+
+@font-face {
+    font-family: "CARGO CRATE";
+    src: url(assets/CARGC___.TTF);
+}
+
+@font-face {
+    font-family: "BEBASKAI";
+    src: url(assets/BebasKai.ttf);
+}
+
+.main-title-font {
+    font-size: 80px;
+}
+
+.main-title-subtext-font {
+    font-size: 42px;
+}
+
+.section-title-font {
+    font-size: 40px;
+}
+
+.founder-title-font {
+    font-size: 24px;
+}
+
+.founder-subtext-font {
+    font-size: 20px;
+}
+
+.section-paragraph-font {
+    font-size: 32px;
+    font-family: "BEBASKAI";
+}
+
+@media (max-width: 900px) {
+    .section-title-font {
+        font-size: 30px;
+    }
+
+    .section-paragraph-font {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-font {
+        font-size: 24px;
+    }
+
+    .section-paragraph-font {
+        font-size: 20px;
+    }
+
+    .founder-title-font {
+        font-size: 20px;
+    }
+    
+    .founder-subtext-font {
+        font-size: 18px;
+    }
+}

@@ -19,6 +19,25 @@ document.addEventListener("DOMContentLoaded", () => {
     logo = document.getElementById("logo");
     currentPage = "our-story";
 
+    let orderHandwrapsButton = document.getElementById("order-handwraps-button");
+    let orderHandwrapsModalXOut = document.getElementById("handwraps-modal-x-out");
+
+    // orderHandwrapsButton.addEventListener("click", () => {
+    //     let handwrapsModal = document.getElementById("handwraps-modal");
+    //     handwrapsModal.style.display = "flex";
+    //     setTimeout(() => {
+    //         handwrapsModal.style.opacity = 1;
+    //     }, 1);
+    // });
+
+    // orderHandwrapsModalXOut.addEventListener("click", () => {
+    //     handwrapsModal.style.opacity = 0;
+    //     setTimeout(() => {
+    //         handwrapsModal.style.display = "none";
+    //     },500)
+    // });
+
+
     let productsNav = document.getElementById("products-nav");
     let ourStoryNav = document.getElementById("our-story-nav");
     let contactUsNav = document.getElementById("contact-us-nav");
@@ -144,15 +163,23 @@ window.addEventListener("resize", () => {
         
         document.getElementById("header-main").style.display = "block";
         document.getElementById("header-bottom-text").style.display = "block";
-        document.getElementById("contact-us-email-input").style.minWidth = "600"
-        document.getElementById("contact-us-phone-input").style.minWidth = "600"
-        document.getElementById("contact-us-textarea").style.minWidth = "600"
+        document.getElementById("contact-us-email-input").style.minWidth = "600px";
+        document.getElementById("contact-us-phone-input").style.minWidth = "600px";
+        document.getElementById("contact-us-textarea").style.minWidth = "600px";
     } else {
+
+        ourStoryPage.style.marginRight = "40px";
+        ourStoryPage.style.marginLeft = "40px";
+        productsPage.style.marginRight = "40px";
+        productsPage.style.marginLeft = "40px";
+        contactUsPage.style.marginRight = "40px";
+        contactUsPage.style.marginLeft = "40px";
+
         document.getElementById("header-bottom-text").style.display = "none";
         document.getElementById("header-main").style.display = "none";
-        document.getElementById("contact-us-email-input").style.minWidth = "360px"
-        document.getElementById("contact-us-phone-input").style.minWidth = "360px"
-        document.getElementById("contact-us-textarea").style.minWidth = "360px"
+        document.getElementById("contact-us-email-input").style.minWidth = "360px";
+        document.getElementById("contact-us-phone-input").style.minWidth = "360px";
+        document.getElementById("contact-us-textarea").style.minWidth = "360px";
     }
     
     // console.log(logo);
