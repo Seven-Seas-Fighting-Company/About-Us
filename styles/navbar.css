@@ -1,0 +1,36 @@
+#navbar {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 8%;
+    height: 60px;
+    /* padding: 16px; */
+    margin-bottom: 80px;
+}
+
+.nav-element {
+    color: white;
+    transition: color 0.3s ease-in-out;
+    /* padding: 4px; */
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected {
+    color: rgb(66, 157, 173);
+}
+
+.nav-element:hover {
+    cursor: pointer;
+    color: rgb(66, 157, 173);
+}
+
+@media (max-width: 500px) {
+    #navbar {
+        gap: 6%;
+    }
+}

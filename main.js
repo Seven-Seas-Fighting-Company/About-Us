@@ -1,187 +1,97 @@
-let docWidth;
-let testDiv;
-let logo;
-let currentPage;
-let productsPage;
-let ourStoryPage;
-let contactUsPage;
-let containers;
-
 document.addEventListener("DOMContentLoaded", () => {
+
+    let currentPage = "story-page";
     
-    //add buy now button below products, include free shipping for sf and san luis obispo
 
-    console.log(visualViewport.width);
-    docWidth = document.createElement("div");
-    testDiv = document.getElementById("test");
-    testDiv.appendChild(docWidth);
-    docWidth.innerHTML = visualViewport.width;
-    logo = document.getElementById("logo");
-    currentPage = "our-story";
+    let productsLink = document.getElementById("products-link");
+    let storyLink = document.getElementById("story-link");
+    let contactLink = document.getElementById("contact-link");
+    
+    
+    let currentLink = "story-link";
+    storyLink.classList.add("selected");
+    
+    let swappable = true;
+    
+    let handwrapsButton = document.getElementById("handwraps-order-button");
+    let handwrapsXOut = document.getElementById("handwraps-modal-x-out");
+    let handwrapsSubmitOrderButton = document.getElementById("handwraps-submit-order-button");
+    
 
-    let orderHandwrapsButton = document.getElementById("order-handwraps-button");
-    let orderHandwrapsModalXOut = document.getElementById("handwraps-modal-x-out");
+    function swapPage(from, fromLink, to, toLink) {
+        let cPage = document.getElementById(from);
+        if (currentPage !== to) {
+            cPage.style.opacity = 0;
+            document.getElementById(fromLink).classList.remove("selected");
+            document.getElementById(toLink).classList.add("selected");
+            currentLink = toLink;
+            swappable = false;
+            setTimeout(() => {
+                cPage.style.display = "none";
+                currentPage = to;
+                document.getElementById(to).style.display = "block";
+            }, 400);
 
-    // orderHandwrapsButton.addEventListener("click", () => {
-    //     let handwrapsModal = document.getElementById("handwraps-modal");
-    //     handwrapsModal.style.display = "flex";
-    //     setTimeout(() => {
-    //         handwrapsModal.style.opacity = 1;
-    //     }, 1);
-    // });
+            setTimeout(() => {
+                document.getElementById(to).style.opacity = 1;
+            }, 410);
 
-    // orderHandwrapsModalXOut.addEventListener("click", () => {
-    //     handwrapsModal.style.opacity = 0;
-    //     setTimeout(() => {
-    //         handwrapsModal.style.display = "none";
-    //     },500)
-    // });
+            setTimeout(() => {swappable = true;}, 900);
+        }
+    };
 
-
-    let productsNav = document.getElementById("products-nav");
-    let ourStoryNav = document.getElementById("our-story-nav");
-    let contactUsNav = document.getElementById("contact-us-nav");
-
-    productsPage = document.getElementById("products-container");
-    ourStoryPage = document.getElementById("our-story-container");
-    contactUsPage = document.getElementById("contact-us-container");
-
-    productsPage.style.display = 'none';
-    contactUsPage.style.display = 'none';
-
-    // ourStoryNav.style.color = "#429DAD";
-    ourStoryNav.classList.add("selected");
-
-    function swapPage(fromPage, toPage, fromNav, toNav, pageName) {
-        fromPage.style.opacity = 0;
-        console.log(fromNav, 'im from nav');
-        // fromNav.style.color = "#FFFFFF";
-        // toNav.style.color = "#429DAD";
-        fromNav.classList.remove("selected");
-        toNav.classList.add("selected");
-        console.log(toNav);
-        let counter = 0;
-        let interval = setInterval(() => {
-            if (counter === 0) {
-                fromPage.style.display = 'none';
-                toPage.style.display = 'block';
-                currentPage = pageName;
-                counter += 1;
-            } else if (counter === 1) {
-                toPage.style.opacity = 1;
-                counter += 1;
-            } else {
-                counter = 0;
-                clearInterval(interval);
-            }
-        }, 200)
+    function openProductModal(productName) {
+        let modal = document.getElementById(`${productName}-modal`);
+        modal.style.display = "block";
+        setTimeout(() => {
+            modal.style.opacity = 1;
+        }, 10);
     }
 
-    if (visualViewport.width < 768) {
-        document.getElementById("header-bottom-text").style.display = "none";
-        document.getElementById("header-main").style.display = "none";
-        document.getElementById("contact-us-email-input").style.minWidth = "360px"
-        document.getElementById("contact-us-phone-input").style.minWidth = "360px"
-        document.getElementById("contact-us-textarea").style.minWidth = "360px"
-        document.getElementById("navbar").style.fontSize = "26px"
+    function closeProductModal(productName) {
+        let modal = document.getElementById(`${productName}-modal`);
+        modal.style.opacity = 0;
+        setTimeout(() => {modal.style.display = "none";}, 400);
     }
 
-    productsNav.addEventListener("click", () => {
-        let previousPage = document.getElementById(`${currentPage}-container`);
-        let previousNav = document.getElementById(`${currentPage}-nav`);
-        let nextPage = document.getElementById("products-container");
-        let nextNav = document.getElementById("products-nav");
-        let nextPageName = "products";
+    function submitProductOrder(productName) {
+        let form = document.getElementById(`${productName}-order-form`);
+        form.submit();
+        setTimeout(() => {
+            form.reset();
+        }, 900);
+    }
 
-        if (currentPage !== "products") {
-            swapPage(previousPage, nextPage, previousNav, nextNav, nextPageName);
-        };
-        
+
+    handwrapsButton.addEventListener("click", () => {
+        openProductModal("handwraps");
     });
 
-    ourStoryNav.addEventListener("click", () => {
-        let previousPage = document.getElementById(`${currentPage}-container`);
-        let previousNav = document.getElementById(`${currentPage}-nav`);
-        let nextPage = document.getElementById("our-story-container");
-        let nextNav = document.getElementById("our-story-nav");
-        let nextPageName = "our-story";
-        if (currentPage !== "our-story") {
-            swapPage(previousPage, nextPage, previousNav, nextNav, nextPageName);
-        };
-        
+    handwrapsXOut.addEventListener("click", () => {
+        closeProductModal("handwraps");
     });
 
-    contactUsNav.addEventListener("click", () => {
-        let previousPage = document.getElementById(`${currentPage}-container`);
-        let previousNav = document.getElementById(`${currentPage}-nav`);
-        let nextPage = document.getElementById("contact-us-container");
-        let nextNav = document.getElementById("contact-us-nav");
-        let nextPageName = "contact-us";
-        if (currentPage !== "contact-us") {
-            swapPage(previousPage, nextPage, previousNav, nextNav, nextPageName);
-        };
-    });
+    handwrapsSubmitOrderButton.addEventListener("click", () => {
+        submitProductOrder("handwraps");
+    })
 
-    document.getElementById("order-handwraps-button").addEventListener("click", () => {
-        let menu = document.getElementById("order-handwraps-menu");
-        if (menu.style.display == "none") {
-            menu.style.display = "block";
-        } else {
-            menu.style.display = "none";
+    productsLink.addEventListener("click", () => {
+        if (swappable) {
+            swapPage(currentPage, currentLink, "products-page", "products-link");
         }
     });
+
+    storyLink.addEventListener("click", () => {
+        if (swappable) {
+            swapPage(currentPage, currentLink, "story-page", "story-link");
+        }
+    });
+
+    contactLink.addEventListener("click", () => {
+        if (swappable) {
+            swapPage(currentPage, currentLink, "contact-page", "contact-link");
+        }
+    });
+
+
 });
-/*
-window.addEventListener("resize", () => {
-    docWidth.innerHTML = visualViewport.width;
-    logo.style.width = (`${Math.max(Math.round(visualViewport.width / 10.9), 120)}px`)
-    console.log(logo);
-});
-*/
-
-window.addEventListener("resize", () => {
-    docWidth.innerHTML = visualViewport.width;
-    if (visualViewport.width <= 768) {
-        logo.style.width = '100px';
-    } else {
-        logo.style.width = (`${Math.max(Math.round(visualViewport.width / 10.9), 90)}px`);
-
-    }
-
-    // console.log(containers);
-    // console.log(docWidth)
-
-    if (visualViewport.width > 768) {
-        
-        ourStoryPage.style.marginRight = `${Math.min(400, Math.max(100, 400 - (1920 - visualViewport.width) / 2))}px`;
-        productsPage.style.marginRight = `${Math.min(400, Math.max(100, 400 - (1920 - visualViewport.width) / 2))}px`;
-        contactUsPage.style.marginRight = `${Math.min(400, Math.max(100, 400 - (1920 - visualViewport.width) / 2))}px`;
-        
-        ourStoryPage.style.marginLeft = `${Math.min(400, Math.max(100, 400 - (1920 - visualViewport.width) / 2))}px`;
-        productsPage.style.marginLeft = `${Math.min(400, Math.max(100, 400 - (1920 - visualViewport.width) / 2))}px`;
-        contactUsPage.style.marginLeft = `${Math.min(400, Math.max(100, 400 - (1920 - visualViewport.width) / 2))}px`;
-        
-        document.getElementById("header-main").style.display = "block";
-        document.getElementById("header-bottom-text").style.display = "block";
-        document.getElementById("contact-us-email-input").style.minWidth = "600px";
-        document.getElementById("contact-us-phone-input").style.minWidth = "600px";
-        document.getElementById("contact-us-textarea").style.minWidth = "600px";
-    } else {
-
-        ourStoryPage.style.marginRight = "40px";
-        ourStoryPage.style.marginLeft = "40px";
-        productsPage.style.marginRight = "40px";
-        productsPage.style.marginLeft = "40px";
-        contactUsPage.style.marginRight = "40px";
-        contactUsPage.style.marginLeft = "40px";
-
-        document.getElementById("header-bottom-text").style.display = "none";
-        document.getElementById("header-main").style.display = "none";
-        document.getElementById("contact-us-email-input").style.minWidth = "360px";
-        document.getElementById("contact-us-phone-input").style.minWidth = "360px";
-        document.getElementById("contact-us-textarea").style.minWidth = "360px";
-    }
-    
-    // console.log(logo);
-});
-

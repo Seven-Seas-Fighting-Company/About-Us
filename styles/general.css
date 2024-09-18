@@ -1,0 +1,52 @@
+body {
+    margin: 0px;
+    background-image: url(../assets/japanese-wave-seamless-pattern-free-vector-ultra-white.jpg);
+}
+
+a {
+    user-select: none;
+}
+
+.section-container {
+    margin-right: 400px;
+    margin-left: 400px;
+}
+
+.page {
+    transition: opacity 0.4s ease-in-out;
+}
+
+@media (max-width: 1600px) {
+    .section-container {
+        margin-right: 300px;
+        margin-left: 300px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .section-container {
+        margin-right: 200px;
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .section-container {
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .section-container {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    .section-container {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}

@@ -3,289 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="modal.css">
+    <title>Seven Seas Fighting Company</title>
 </head>
 <body>
-
-    <div id="total-wrapper">
-            <!-- <div id="handwraps-modal" class="product-modal">
-                <div id="handwraps-modal-x-out">X</div>                
-            </div> -->
-            <div id="header">
-                <!-- <img id="logo" src="assets/Seven Seas Logo revised official.png" width="200px"> -->
-                <h1 id="header-main">Seven Seas</h1>
-                <h2 id="header-bottom-text">Fighting Company</h2>
-            </div>
-
-            <div id="navbar">
-                <a class="nav-element" id="products-nav">Products</a>
-                <a class="nav-element" id="our-story-nav">Our Story</a>
-                <a class="nav-element" id="contact-us-nav">Contact Us!</a>
-            </div>
-            
-           
-
-            <img id="logo" src="assets/Seven Seas Logo revised official.png" width="175px">
-            
-            <div id="our-story-container" class="container">
-                <div class="our-story-section-container">
-                    <div class="our-story-section-title section-title-font">Founded Locally, in San Francisco</div>
-                    <div class="our-story-section-paragraph section-paragraph-font">Founded in San Francisco by two passionate martial artists, 
-                        Seven Seas Fighting Company began with a simple question during a weekend sparring session in the park: 
-                        "What if martial arts gear didn't stink?" Driven by that idea, we pooled our resources and set out to create antibacterial gear.
-                    </div>
-                </div>
-                <div class="our-story-section-container">
-                    <div class="our-story-section-title section-title-font">Mission</div>
-                    <div class="our-story-section-paragraph section-paragraph-font">To equip every martial artist with advanced anti-microbial gear, 
-                        defeating odors and increasing sanitary standards.
-                    </div>
-                </div>
-                <div class="our-story-section-container">
-                    <div class="our-story-section-title section-title-font">Eco Friendly Manufacturing</div>
-                    <div class="our-story-section-paragraph section-paragraph-font">We believe that raising the bar in the martial arts gear market goes hand in hand with environmental consciousness. 
-                        All byproducts of our infusion process are converted into environmentally friendly fertilizers.
-                    </div>
-                </div>
-                <div class="our-story-section-container">
-                    <div class="our-story-section-title section-title-font">Looking to the Future</div>
-                    <div class="our-story-section-paragraph section-paragraph-font">Our first product, antibacterial handwraps, are out now, selling direct to consumers in San Francisco. 
-                        The nationwide launch is coming soon on amazon.com. But innovation doesn't stop with hand wraps. 
-                        We’re gearing up to release antibacterial boxing gloves in a matter of months, 
-                        as well as shin guards, jockstraps, headbands and more within a year.
-                    </div>
-                </div>
-                <div class="our-story-section-container" id="our-story-last-container">
-                    <div class="our-story-section-title section-title-font" id="our-story-founders-title">Meet the Founders</div>
-                    <!-- <div class="our-story-section-paragraph">  </div> -->
-                     <div id="founders-images-container">
-                        <div class="center">
-                            <img class="founder-img" src="assets/Alex.png" width="300px">
-                            <div class="founder-description" id="alex-description">
-                                <div class="founder-name center founder-title-font">
-                                    Alexander Krause
-                                </div>
-                                <div class="founder-title center founder-subtext-font">
-                                    Business Manager
-                                </div>
-                            </div>
-                        </div>
-                        <div class="center">
-                            <img class="founder-img" src="assets/Jesse.png" width="300px">
-                            <div class="founder-description" id="jesse-description">
-                                <div class="founder-name center founder-title-font">
-                                    Jesse Driskill
-                                </div>
-                                <div class="founder-title center founder-subtext-font">
-                                    Operations Manager
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                </div>
-            </div>
-
-            <div id="products-container" class="container">
-                <div class="products-section-container">
-                    <div class="product-name section-title-font">Anti-Microbial Handwraps - $15</div>
-                    <div class="product-sub">
-                        <div class="product-top">
-                            <div class="product-left">
-                                <div class="product-description section-paragraph-font">KO bacteria, takedown odor, wick moisture. <br>Our first of their kind handwraps are:
-                                    <ul>
-                                        <li>Antibacterial</li>
-                                        <li>Odor-reducing</li>
-                                        <li>Circulation enhancing</li>
-                                        <li>Moisture wicking</li>
-                                    </ul>
-    
-                                    
-                                </div> 
-                            </div>
-                            <div class="product-right">
-                                <img class="product-img" height="200px" style="border: 0px solid black;" src="assets/7seaswrapspng.png">
-                            </div>
-                        </div>
-
-                        <div class="product-bottom">
-                            <div class="order-now-container">
-
-                                <button class="order-now-button" 
-                                id="order-handwraps-button">Order Now!</button>
-                                <div id="handwraps-order-subtext">(Local Delivery to SF and SLO Only)</div>
-                                <div class="order-product-menu" 
-                                id="order-handwraps-menu"
-                                style="display: none;">
-                                <form id="order-handwraps-form" action="https://formspree.io/f/xzzpolpg" method="POST">
-                                    <!-- <label>Send Us A Message!</label> -->
-                                    <div class="order-product-form-inputs-container">
-                                        
-                                        <label>Phone Number</label>
-                                        <input
-                                            name="phone-number" 
-                                            id="order-handwraps-phone-input" 
-                                            class="product-phone-input">
-                                        
-                                        </input> <br>
-                                        <label>Pairs</label>
-                                        <select class="product-quantity-input" name="pairs-handwraps-requested">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                        </select>
-                        
-                                    </div>
-                                    <button id="contact-us-form-button" type="submit">Submit Request</button>
-                                    <div id="handwraps-order-subtext">After Sending your order, we'll contact you to arrange a delivery!</div>
-                                </form>
-                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="products-section-container">
-                    <div class="product-name section-title-font">Anti-Microbial Boxing Gloves - Coming Soon!</div>
-                    <!-- <footer>Coming soon!</footer> -->
-                    <div class="product-sub">
-
-                        <div class="product-left">
-                            <div class="product-description">
-                                
-                            </div>
-                        </div>
-                        <div class="product-right">
-                            <img class="product-img" height="250px" style="border: 6px solid black; display: none;" src="">
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="products-section-container">
-                    <div class="product-name section-title-font">Anti-Microbial Headbands - Coming Soon!</div>
-                    <!-- <footer>Coming soon!</footer> -->
-                    <div class="product-sub">
-
-                        <div class="product-left">
-                            <div class="product-description">
-                                
-                            </div>
-                        </div>
-                        <div class="product-right">
-                            <img class="product-img" height="250px" style="border: 6px solid black; display: none;" src="">
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="products-section-container">
-                    <div class="product-name section-title-font">Anti-Microbial Jockstraps - Coming Soon!</div>
-                    <!-- <footer>Coming soon!</footer> -->
-                    <div class="product-sub">
-
-                        <div class="product-left">
-                            <div class="product-description">
-                                
-                            </div>
-                        </div>
-                        <div class="product-right">
-                            <img class="product-img" height="250px" style="border: 6px solid black; display: none;" src="">
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="products-section-container">
-                    <div class="product-name section-title-font">Anti-Microbial Shin Guards - Coming Soon!</div>
-                    <!-- <footer>Coming soon!</footer> -->
-                    <div class="product-sub">
-
-                        <div class="product-left">
-                            <div class="product-description">
-                                
-                            </div>
-                        </div>
-                        <div class="product-right">
-                            <img class="product-img" height="250px" style="border: 6px solid black; display: none;" src="">
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="products-section-container">
-                    <div class="product-name section-title-font">Anti-Microbial Boxing Shorts - Coming Soon!</div>
-                    <!-- <footer>Coming soon!</footer> -->
-                    <div class="product-sub">
-
-                        <div class="product-left">
-                            <div class="product-description">
-                                
-                            </div>
-                        </div>
-                        <div class="product-right">
-                            <img class="product-img" height="250px" style="border: 6px solid black; display: none;" src="">
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div id="contact-us-container" class="container">
-                <div class="contact-us-section-container">
-                    <div class="contact-us-header-container">
-                        <div class="contact-us-header">
-                            Contact Us!
-                        </div>
-                    </div>
-                    <div class="contact-us-subtext-container">
-                        <div class="contact-us-subtext">
-                            Email: SevenSeasFC@yahoo.com <br>
-                            Call/Text: 650-278-8903 <br>
-                            Send Us A Message! <br>
-                        </div>
-                        <form id="contact-us-form" action="https://formspree.io/f/mrbzoppb" method="POST">
-                            <!-- <label>Send Us A Message!</label> -->
-                            <div class="center contact-us-textareas-container">
-                                <label style="text-align: left;">Your Email:</label>
-                                <input type="email" name="email" id="contact-us-email-input" class="contact-us-info-input"></input>
-                                <label>Your Phone Number: (XXX-XXX-XXXX)</label>
-                                <input
-                                    name="phone-number" 
-                                    id="contact-us-phone-input" 
-                                    class="contact-us-info-input">
-                                    
-                                </input>
-                                <label>Message:</label>
-                                <textarea id="contact-us-textarea" name="message"></textarea>
-                            </div>
-                            <button id="contact-us-form-button" type="submit">Send!</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- <div id="footer">
-                <div>Contact Us!</div>
-                <div>Phone Number: 415-640-9340</div>
-                <div>Email: SevenSeasFC@yahoo.com</div>
-            </div> -->
-
-            <div id="test" style="visibility: hidden;">
-                
-            </div>
-
-            
+    <div class="product-modal" id="handwraps-modal" style="display: none; opacity: 0;">
+        <div class="product-modal-x-out" id="handwraps-modal-x-out">X</div>
+        <div class="product-modal-top">
+            <div class="product-modal-title">Order Anti-microbial Handwraps</div>
         </div>
 
-</body>
+        <div class="product-modal-middle">
+            <form id="handwraps-order-form" class="product-modal-order-form" action="https://formspree.io/f/xzzpolpg" method="POST">
+                <label class="modal-label">Phone Number</label>
+                <input name="phone-number" class="product-modal-input">
+                <label class="modal-label">Pairs</label>
+                <select class="product-quantity-input" name="pairs-handwraps-requested">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </form>
 
-<script src="main.js" type="text/javascript"></script>
+        </div>
+        
+        <div class="product-modal-bottom-container">
+            <button id="handwraps-submit-order-button" class="product-submit-order-button">Submit Order*</button>
+            <div class="product-modal-disclaimer">*Local in-person Delivery to San Luis Obispo and San Francisco Only</div>
+            <div class="product-modal-disclaimer">*After submitting your order, we'll contact you shortly to arrange delivery and payment</div> 
+
+        </div>
+
+    </div>
+    <div id="total-wrapper">
+        <div id="header">
+            <div id="site-title" class="company-name-font">
+                Seven Seas
+            </div>
+            <div id="site-title-sub" class="company-name-secondary-font">
+                Fighting Company
+            </div>
+            
+        </div>
+        <div id="navbar">
+            <a id="products-link" class="nav-element nav-font">Products</a>
+            <a id="story-link" class="nav-element nav-font">Our Story</a>
+            <a id="contact-link" class="nav-element nav-font">Contact Us</a>
+        </div>
+
+        <div id="story-page" class="page">
+            <div class="section-container our-story-section-container">
+                <div class="section-title section-title-font our-story-section-title">Founded Locally, In San Francisco</div>
+                <div class="subtext-font our-story-section-paragraph">Founded in San Francisco by two passionate martial artists, 
+                    Seven Seas Fighting Company began with a simple question during a weekend sparring session in the park: 
+                    "What if martial arts gear didn't stink?" 
+                    Driven by that idea, we pooled our resources and set out to create antibacterial gear.
+                </div>
+            </div>
+            <div class="section-container our-story-section-container">
+                <div class="section-title section-title-font our-story-section-title">Mission</div>
+                <div class="subtext-font our-story-section-paragraph">To equip every martial artist with advanced anti-microbial gear, 
+                    defeating odors and increasing sanitary standards.
+                </div>
+            </div>
+            <div class="section-container our-story-section-container">
+                <div class="section-title section-title-font our-story-section-title">Eco Friendly Manufacturing</div>
+                <div class="subtext-font our-story-section-paragraph">We believe that raising the bar in the martial arts gear market goes hand in hand with environmental consciousness. 
+                    All byproducts of our infusion process are converted into environmentally friendly fertilizers.
+                </div>
+            </div>
+            <div class="section-container our-story-section-container">
+                <div class="section-title section-title-font our-story-section-title">Looking to the Future</div>
+                <div class="subtext-font our-story-section-paragraph">Our first product, antibacterial handwraps, are out now, selling direct to consumers in San Francisco. 
+                    The nationwide launch is coming soon on amazon.com. But innovation doesn't stop with hand wraps. 
+                    We’re gearing up to release antibacterial boxing gloves in a matter of months, as well as shin guards, jockstraps, headbands and more within a year.
+                </div>
+            </div>
+            <!-- <div id="footer-delimiter" class="nav-font text-center">Meet the Founders</div> -->
+            <div class="section-container meet-the-founders-section-container">
+                <div id="founders-top">
+                    <div id="founders-section-title" class="section-title-font text-center">Meet the Founders</div>
+                </div>
+                <div id="founders-bottom">
+                    <div id="founders-bottom-left" class="founder-info-container text-center">
+                        <img src="assets/Alex.png" class="founder-img">
+                        <div class="founder-description-container">
+                            <div class="founder-name">Alex Krause</div>
+                            <div class="founder-title">Business Manager</div>
+                        </div>
+                    </div>
+                    <div id="founders-bottom-right" class="founder-info-container text-center">
+                        <img src="assets/Jesse.png" class="founder-img">
+                        <div class="founder-description-container">
+                            <div class="founder-name" class="founder-img">Jesse Driskill</div>
+                            <div class="founder-title">Operations Manager</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="products-page" class="page" style="opacity: 0; display: none;">
+            <div class="section-container products-section-container">
+                <div class="product-top">
+                    <div class="product-name section-title-font">Anti-Microbial Handwraps - $15</div>
+                </div>
+                <div class="product-middle">
+                    <div class="product-middle-left">
+                        <div class="product-description subtext-font">KO bacteria, takedown odor, wick moisture.
+                            Our first of their kind handwraps are:</div>
+                        <ul class="product-description-list subtext-font">
+                            <li>Antibacterial</li>
+                            <li>Odor-reducing</li>
+                            <li>Circulation enhancing</li>
+                            <li>Moisture wicking</li>
+                        </ul>
+                    </div>
+                    <div class="product-middle-right">
+                        <img src="assets/7seaswrapspng.png" class="product-image">
+                    </div>
+                </div>
+                <div class="product-bottom">
+                    <img id="handwraps-image-mobile" src="assets/7seaswrapspng.png">
+                    <button id="handwraps-order-button" class="product-order-button">Order</button>
+                </div>
+            </div>
+
+            <div class="section-container products-section-container">
+                <div class="product-name section-title-font">Anti-Microbial Boxing Gloves - Coming Soon!</div>
+            </div>
+
+            <div class="section-container products-section-container">
+                <div class="product-name section-title-font">Anti-Microbial Headbands - Coming Soon!</div>
+            </div>
+
+            <div class="section-container products-section-container">
+                <div class="product-name section-title-font">Anti-Microbial Jockstraps - Coming Soon!</div>
+            </div>
+
+            <div class="section-container products-section-container">
+                <div class="product-name section-title-font">Anti-Microbial Shin Guards - Coming Soon!</div>
+            </div>
+
+            <div class="section-container products-section-container">
+                <div class="product-name section-title-font">Anti-Microbial Shorts - Coming Soon!</div>
+            </div>
+        </div>
+
+        <div id="contact-page" class="page" style="opacity: 0; display: none;">
+            <div class="section-container contact-section-container">
+                <div class="section-title-font">Contact Us</div>
+                <form id="contact-us-form" class="subtext-font" method="POST" action="https://formspree.io/f/mrbzoppb">
+                    <label class="contact-label">Your Email:</label>
+                    <input type="email" name="email" id="contact-email-input" class="subtext-font contact-input"></input>
+                    <label class="contact-label">Your Phone Number:</label>
+                    <input name="phone-number" id="contact-phone-input" class="subtext-font contact-input"></input>
+                    <label class="contact-label">Message:</label>
+                    <textarea name="message" id="contact-message-input" class="subtext-font contact-input"></textarea>
+                    <button id="contact-submit-button" type="submit">Send!</button>
+                </form>
+            </div>
+
+            <div class="section-container contact-section-container">
+                <div class="section-title-font">Or, Email/Text Us!</div><br>
+                <div class="subtext-font">
+                    Email: SevenSeasFC@yahoo.com <br>
+                    Call/Text: 650-278-8903 <br>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+    
+    
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/our-story.css">
+    <link rel="stylesheet" href="styles/founder-section.css">
+    <link rel="stylesheet" href="styles/products.css">
+    <link rel="stylesheet" href="styles/contact-us.css">
+    <link rel="stylesheet" href="styles/modals.css">
+    <script type="text/javascript" src="main.js"></script>
+</body>
 </html>

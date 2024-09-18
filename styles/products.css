@@ -1,0 +1,113 @@
+
+.product-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.product-middle-left {
+    width: 50%;
+}
+
+.product-image {
+    max-width: 250px;
+}
+
+.products-section-container {
+    border-bottom: 2px solid black;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#handwraps-image-mobile {
+    display: none;
+    width: 100px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.product-order-button {
+    user-select: none;
+    font-family: "CARGO CRATE";
+    border: 6px solid black;
+    color: white;
+    background-color: rgb(66, 157, 173);
+    padding: 10px;
+    font-size: 24px;
+}
+
+.product-order-button:hover {
+    cursor: pointer;
+    color: black;
+}
+
+@media (max-width: 750px) {
+    .product-image {
+        max-width: 175px;
+    }
+
+    .product-order-button {
+        border: 4px solid black;
+        padding: 8px;
+        font-size: 20px;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .product-name {
+        text-align: center;
+    }
+
+    .product-image {
+        display: none;
+    }
+
+    .product-middle-right {
+        display: none;
+    }
+
+    .product-middle-left {
+        width: 100%;
+    }
+
+    #handwraps-image-mobile {
+        display: flex;
+    }
+
+    .product-description {
+        text-align: center;
+    }
+
+    ul {
+        padding-left: 0px;
+    }
+
+    li {
+        text-align: center;
+        list-style-type: none;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+    .product-image {
+        max-width: 125px;
+    }
+}
+
+@media (max-width: 400px) {
+    .product-image {
+        display: none;
+    }
+}

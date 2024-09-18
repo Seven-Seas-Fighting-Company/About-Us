@@ -1,0 +1,24 @@
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    min-height: 150px;
+    background-image: url(../assets/japanese-wave-seamless-pattern-free-vector.jpg);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    color: black;
+    text-shadow: 
+        1px 1px 0 #fff,
+        -1px 1px 0 #fff,
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff;
+    
+}
+
+#site-title {
+    margin-bottom: 12px;
+}
